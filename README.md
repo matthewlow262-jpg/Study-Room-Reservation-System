@@ -21,10 +21,10 @@ Authorized administrators will be able to manage study room listings.
 
 ### Team Members
 
-| Name | Net ID |
-|---|---|
+| Name | NetID | GitHub username
+|---|---|---|
 | Matthew Low | mjl230002 |
-| Andrew Artiaga | axa220205 |
+| Andrew Artiaga | axa220205 | AndyA64
 | Artyom Gevorgyan | axg200155 |
 | Arjun Sharma | axs220320 |
 | Ernie Hsiao | exh230014 |
