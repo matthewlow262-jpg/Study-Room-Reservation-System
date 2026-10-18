@@ -21,7 +21,7 @@ Authorized administrators will be able to manage study room listings.
 
 ### Team Members
 
-| Name | NetID | GitHub username
+| Name | NetID | GitHub Username
 |---|---|---|
 | Matthew Low | mjl230002 |
 | Andrew Artiaga | axa220205 | AndyA64
