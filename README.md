@@ -28,6 +28,7 @@ Authorized administrators will be able to manage study room listings.
 | Artyom Gevorgyan | axg200155 | ptdg
 | Arjun Sharma | axs220320 | sharmararjun-droid
 | Ernie Hsiao | exh230014 | ErnieHsiao
+| Param Kathiravan | pxk230069 | paramkathir
 
 ## Project Scope
 
