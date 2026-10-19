@@ -25,7 +25,7 @@ Authorized administrators will be able to manage study room listings.
 |---|---|---|
 | Matthew Low | mjl230002 |
 | Andrew Artiaga | axa220205 | AndyA64
-| Artyom Gevorgyan | axg200155 |
+| Artyom Gevorgyan | axg200155 | ptdg
 | Arjun Sharma | axs220320 |
 | Ernie Hsiao | exh230014 |
 
