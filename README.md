@@ -51,6 +51,7 @@ Authorized administrators will be able to manage study room listings.
 
 ## Project Documents
 
+- `P1_Final.pdf` — Final P1
 - `P1_Template_Draft.docx` — Initial P1 template draft
 - [CONTRIBUTIONS.md](CONTRIBUTIONS.md) — Team contribution record
 
