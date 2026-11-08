@@ -1,1 +1,1 @@
-[Section Number] [Image Name]
+[Section.Number]_[Image-Name]
