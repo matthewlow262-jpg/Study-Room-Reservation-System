@@ -13,11 +13,11 @@
 
 | Team Member | Contributions | Commit Hashes, PR numbers | Reviews given (PR numbers)
 |---|---|---|---|
-| Matthew Low | Section 4 | Eb15a8063b685d720b880ad6b2428711aba33c8a (#6) | #7, #8
-| Andrew Artiaga | Sections 1-3 from P1 copied to P2, Section 6.3, Section 6.4 | e48c95d1691b5d2bbfdba4d9ce8b178a9fdb4ae8 (#2) 4bf9b89d4ed01dae64e1fd5c1818df5d3c50acfb (#8) | #3, #4, #9
-| Artyom Gevorgyan | Section 5.2 | |
+| Matthew Low | Section 4.1-4.3, Section 7.1  | Eb15a8063b685d720b880ad6b2428711aba33c8a (#6) c6b8ca06f3ba1fa467db7be6d314988784e1fafc (#11) | #7, #8
+| Andrew Artiaga | Sections 1-3 from P1 copied to P2, Section 6.3, Section 6.4, GitHub diagram uploads & contribution record | e48c95d1691b5d2bbfdba4d9ce8b178a9fdb4ae8 (#2) 4bf9b89d4ed01dae64e1fd5c1818df5d3c50acfb (#8) | #3, #4, #9
+| Artyom Gevorgyan | Section 5.2 | 4c9cd8d2656c77bf94be5ed37f3a7042d38fbbda (#10) | #11
 | Arjun Sharma | Section 6.1, 6.2, Section 6.5, Section 6.6, Section 7.2  | 1932ae5980d612fd23ea1a233be7ef097cdfdc68 (#3) D9dedff03cfb2e9ef2f5b308590e68aacd1ff8e4 (#5) 11f53e806a2dd4d0e4155912791706d3911ddcff (#7) Afd7f68ecef716bc6024443b91ca3ce402b6caa9 (#9) | #1
-| Ernie Hsiao | Section 5  | 0732e2db6a9ecf8ad38da142e0aad6cd6911451c (#4) | #5, #2, #6
-| Param Kathiravan | | |
+| Ernie Hsiao | Section 5, Section 10  | 0732e2db6a9ecf8ad38da142e0aad6cd6911451c (#4) | #5, #2, #6, #10
+| Param Kathiravan | Section 8 - Architecture Spike S-01; Section 9.1 - Extended Traceability Matrix; Section 9.2 - Gap Analysis | 8fac0da3b6f49bed1f460e19e5d5fef1eee30145 (#1) | #11
 
 Contributions will be updated as the project progresses. GitHub commits and document history will provide evidence of completed work.
