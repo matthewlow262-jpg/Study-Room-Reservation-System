@@ -7,6 +7,9 @@ public class Main {
     private static final String STUDENT_EMAIL = "student@utdallas.edu";
     private static final String STUDENT_PASSWORD = "Password123";
 
+    private static final String STUDENT2_EMAIL = "student2@utdallas.edu";
+    private static final String STUDENT2_PASSWORD = "Password789";
+
     private static final String MANAGER_EMAIL = "manager@utdallas.edu";
     private static final String MANAGER_PASSWORD = "Password456";
 
@@ -37,6 +40,9 @@ public class Main {
         }
         email = email.trim();
         if (email.equalsIgnoreCase(STUDENT_EMAIL) && password.equals(STUDENT_PASSWORD)) {
+            return Role.STUDENT;
+        }
+        if (email.equalsIgnoreCase(STUDENT2_EMAIL) && password.equals(STUDENT2_PASSWORD)) {
             return Role.STUDENT;
         }
         if (email.equalsIgnoreCase(MANAGER_EMAIL) && password.equals(MANAGER_PASSWORD)) {
