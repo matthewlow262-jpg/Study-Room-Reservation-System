@@ -1,3 +1,10 @@
+/******************************************************************************
+
+we are going to show all rooms in the menu, and mark them as available or not
+we are going to have 6 rooms total (for now)
+
+*******************************************************************************/
+
 import java.util.Scanner;
 
 public class Main {
