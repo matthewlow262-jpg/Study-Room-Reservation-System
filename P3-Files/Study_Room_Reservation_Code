@@ -3,10 +3,54 @@ import java.util.Scanner;
 public class Main
 {
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-	    System.out.print("Enter your UTD email: ");
-        String email = scanner.nextLine();
-        System.out.print("Enter your password: ");
-        String password = scanner.nextInt();	    
+	    
+	    
+        System.out.println("=====================================");
+        System.out.println("   STUDY ROOM RESERVATION SYSTEM");
+        System.out.println("=====================================");
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        String username1 = "student@utdallas.edu";
+        String password1 = "Password123";
+        
+        String username2 = "manager@utdallas.edu";
+        String password2 = "Password456";
+        
+        int MAX_ATTEMPTS = 3;
+        boolean loggedIn = false;
+        
+        for (int attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+        	    
+        	    System.out.print("Enter your UTD email: ");
+                String email = scanner.nextLine();
+        
+                System.out.print("Enter your password: ");
+                String password = scanner.nextLine();	
+                
+                if ((email.equals(username1) && password.equals(password1)) || (email.equals(username2) && password.equals(password2))) {
+                    System.out.println("\nLogin successful");
+                    System.out.println("Welcome, " + email + "!");
+                    
+                    loggedIn = true;
+                    break;
+                }
+                
+                int remaining = MAX_ATTEMPTS - attempt;
+                
+                if (remaining > 0) {
+                    System.out.println("Invalid username or password. " + remaining + " attempts left.");
+                }
+                
+                if (!loggedIn) {
+                    System.out.println("\nToo many failed attempts. Access denied.");
+                }
+                
+        
+        }
+        
+        scanner.close();
+        
+        
 	}
 }
