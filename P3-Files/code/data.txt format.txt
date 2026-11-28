@@ -1,6 +1,7 @@
 STUDENT1
-*r1
-*r2
+<room id> <date (y/m/d)> <time_start> <time_end> <student_count>
+// Example:
+A1 2026/12/25 12:00 13:00 3
 
 STUDENT2
 *r1
@@ -8,7 +9,7 @@ STUDENT2
 MANAGER
 *whatever usage data needs to be here
 
-//NOTE:
+// NOTE:
 This is what "data.txt" should look like at all times. This will keep track of student reservation data and manager usage data. 
 There should be a new line between students/manager. 
 
