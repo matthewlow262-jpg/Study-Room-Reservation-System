@@ -20,6 +20,8 @@ public class Main {
     private static final String MANAGER_EMAIL = "manager@utdallas.edu";
     private static final String MANAGER_PASSWORD = "Password456";
 
+    
+    // Main
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -41,6 +43,7 @@ public class Main {
         scanner.close();
     }
 
+    // email checking
     private static Role authenticate(String email, String password) {
         if (email == null || password == null) {
             return null;
@@ -58,6 +61,7 @@ public class Main {
         return null;
     }
 
+    // login input scanner
     private static Role login(Scanner scanner) {
         while (true) {
             System.out.print("Enter your UTD email: ");
@@ -77,6 +81,7 @@ public class Main {
         }
     }
 
+    // displays menu lines
     private static void showMenu(String title, String[] options) {
         int width = 37;
         String line = "=".repeat(width);
@@ -96,6 +101,7 @@ public class Main {
         return " ".repeat(pad) + text;
     }
 
+    // student menu
     private static void showStudentMenu() {
         showMenu("STUDENT MENU", new String[] {
             "Search available rooms",
@@ -105,6 +111,7 @@ public class Main {
         });
     }
 
+    // manager menu
     private static void showManagerMenu() {
         showMenu("MANAGER MENU", new String[] {
             "Add a room",
@@ -114,4 +121,29 @@ public class Main {
             "Usage reports"
         });
     }
+
+    /* Student functions
+     */
+
+    private static void searchRooms() {}
+
+    private static void reserveRoom() {}
+
+    private static void viewMyReservations() {}
+
+    private static void cancelReservation() {}
+
+
+    /* Manager functions
+     */
+
+    private static void addRoom() {}
+
+    private static void editRoom() {}
+
+    private static void removeRoom() {}
+
+    private static void viewAllReservations() {}
+
+    private static void usageReports() {}
 }
