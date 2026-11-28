@@ -51,6 +51,13 @@ public class ReservationManager {
         if (start == null || end == null || !start.isBefore(end)) {
             throw new IllegalArgumentException("Invalid reservation time.");
         }
+	
+	if (start.getMinute() != 0 || end.getMinute() != 0
+        || start.getSecond() != 0 || end.getSecond() != 0
+        || start.getNano() != 0 || end.getNano() != 0) {
+    		throw new IllegalArgumentException(
+            "Reservations must start and end on the hour.");
+	}
 
         if (!start.isAfter(LocalDateTime.now())) {
             throw new IllegalArgumentException("Reservation must be in the future.");

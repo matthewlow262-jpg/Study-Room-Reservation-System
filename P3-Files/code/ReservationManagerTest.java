@@ -44,7 +44,7 @@ public class ReservationManagerTest {
         boolean overlapRejected = false;
         try {
             manager.reserve("student2@utdallas.edu", 1,
-                    start.plusMinutes(30), end.plusMinutes(30));
+                    start, end.plusHours(1));
         } catch (IllegalStateException e) {
             overlapRejected = true;
         }
@@ -153,7 +153,7 @@ public class ReservationManagerTest {
 
         check("T10 reserved room unavailable",
                 !availabilityManager.isRoomAvailable(
-                        1, start.plusMinutes(15), end));
+                        1, start, end.plusHours(1)));
 
         // T11: Cancellation restores availability
         availabilityManager.cancel(
@@ -172,6 +172,33 @@ public class ReservationManagerTest {
         }
 
         check("T12 invalid search rejected", invalidSearchRejected);
+	
+	// T13: Minute-based booking rejected
+boolean minuteRejected = false;
+try {
+    manager.reserve("student@utdallas.edu", 3,
+            start.plusMinutes(30), end.plusMinutes(30));
+} catch (IllegalArgumentException e) {
+    minuteRejected = true;
+}
+check("T13 minute-based booking rejected", minuteRejected);
+
+// T14: Multi-hour booking allowed
+ReservationManager.Reservation multiHour =
+        manager.reserve("student@utdallas.edu", 3,
+                start, start.plusHours(3));
+
+check("T14 multi-hour booking allowed", multiHour != null);
+
+// T15: Nonzero seconds rejected
+boolean secondsRejected = false;
+try {
+    manager.reserve("student@utdallas.edu", 5,
+            start.plusSeconds(30), end);
+} catch (IllegalArgumentException e) {
+    secondsRejected = true;
+}
+check("T15 seconds-based booking rejected", secondsRejected);
 
         System.out.println();
         System.out.println("================================");
