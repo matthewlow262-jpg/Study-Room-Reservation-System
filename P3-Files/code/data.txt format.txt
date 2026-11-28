@@ -5,9 +5,11 @@ STUDENT1
 STUDENT2
 *r1
 
-Manager
+MANAGER
 *whatever usage data needs to be here
 
 //NOTE:
 This is what "data.txt" should look like at all times. This will keep track of student reservation data and manager usage data. 
+There should be a new line between students/manager. 
+
 * is temporary; will be changed based on whatever we want the format to be. 
