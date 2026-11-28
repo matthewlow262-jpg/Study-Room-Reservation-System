@@ -144,7 +144,7 @@ public class Main {
 
             switch (choice) {
                 case "1":
-                    System.out.println("Room search is not connected yet.");
+                    searchAvailableRooms(scanner);
                     break;
                 case "2":
                     reserveRoom(scanner, email);
@@ -161,6 +161,34 @@ public class Main {
                 default:
                     System.out.println("Invalid option. Try again.");
             }
+        }
+    }
+
+    private static void searchAvailableRooms(Scanner scanner) {
+        try {
+            System.out.print("Start (yyyy-MM-dd HH:mm): ");
+            LocalDateTime start = LocalDateTime.parse(
+                    scanner.nextLine().trim(), DATE_FORMAT);
+
+            System.out.print("End (yyyy-MM-dd HH:mm): ");
+            LocalDateTime end = LocalDateTime.parse(
+                    scanner.nextLine().trim(), DATE_FORMAT);
+
+            System.out.println("\nROOM AVAILABILITY");
+            System.out.println("-------------------------");
+
+            for (int roomId = 1; roomId <= 6; roomId++) {
+                boolean available =
+                        reservationManager.isRoomAvailable(roomId, start, end);
+
+                System.out.println("Room " + roomId + ": "
+                        + (available ? "AVAILABLE" : "RESERVED"));
+            }
+
+        } catch (DateTimeParseException e) {
+            System.out.println("Invalid date format.");
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid search: " + e.getMessage());
         }
     }
 

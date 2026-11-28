@@ -140,6 +140,39 @@ public class ReservationManagerTest {
                         && conflicts.get() == 19
                         && errors.get() == 0);
 
+        // T9: Empty room is available
+        ReservationManager availabilityManager = new ReservationManager();
+
+        check("T9 empty room available",
+                availabilityManager.isRoomAvailable(1, start, end));
+
+        // T10: Overlapping reservation blocks availability
+        ReservationManager.Reservation availabilityBooking =
+                availabilityManager.reserve(
+                        "student@utdallas.edu", 1, start, end);
+
+        check("T10 reserved room unavailable",
+                !availabilityManager.isRoomAvailable(
+                        1, start.plusMinutes(15), end));
+
+        // T11: Cancellation restores availability
+        availabilityManager.cancel(
+                availabilityBooking.id, "student@utdallas.edu");
+
+        check("T11 cancelled room available again",
+                availabilityManager.isRoomAvailable(1, start, end));
+
+        // T12: Invalid search range rejected
+        boolean invalidSearchRejected = false;
+
+        try {
+            availabilityManager.isRoomAvailable(1, end, start);
+        } catch (IllegalArgumentException e) {
+            invalidSearchRejected = true;
+        }
+
+        check("T12 invalid search rejected", invalidSearchRejected);
+
         System.out.println();
         System.out.println("================================");
         System.out.println("Tests passed: " + passed);

@@ -106,4 +106,33 @@ public class ReservationManager {
 
         return false;
     }
+
+    // Checks whether a room is available during a requested time range.
+    // Cancelled reservations do not block availability.
+    public synchronized boolean isRoomAvailable(
+            int roomId, LocalDateTime start, LocalDateTime end) {
+
+        if (roomId < 1 || roomId > 6) {
+            throw new IllegalArgumentException("Room must be between 1 and 6.");
+        }
+
+        if (start == null || end == null || !start.isBefore(end)) {
+            throw new IllegalArgumentException("Invalid time range.");
+        }
+
+        if (!start.isAfter(LocalDateTime.now())) {
+            throw new IllegalArgumentException("Start time must be in the future.");
+        }
+
+        for (Reservation existing : reservations) {
+            if (!existing.cancelled
+                    && existing.roomId == roomId
+                    && start.isBefore(existing.end)
+                    && end.isAfter(existing.start)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
