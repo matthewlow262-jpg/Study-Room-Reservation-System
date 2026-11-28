@@ -1,16 +1,21 @@
 STUDENT1
-<room id> <date (y/m/d)> <time_start> <time_end> <student_count>
-// Example:
-A1 2026/12/25 12:00 13:00 3
+<reservation_id> <room_id> <date (yyyy/MM/dd)> <start_time> <end_time> <status>
+
+Example:
+1 2 2026/12/25 12:00 13:00 ACTIVE
+3 5 2026/12/25 16:00 17:00 CANCELLED
 
 STUDENT2
-*r1
+2 4 2026/12/25 14:00 15:00 ACTIVE
 
 MANAGER
-*whatever usage data needs to be here
+*manager usage data format TBD
 
-// NOTE:
-This is what "data.txt" should look like at all times. This will keep track of student reservation data and manager usage data. 
-There should be a new line between students/manager. 
-
-* is temporary; will be changed based on whatever we want the format to be. 
+// NOTES:
+// Each reservation has a unique reservation ID.
+// Room IDs currently range from 1 to 6.
+// Status is ACTIVE or CANCELLED.
+// Cancelling a reservation updates its status and frees the room.
+// Student identifiers are placeholders; the application uses student emails.
+// The actual data.txt file should contain reservation records, not examples.
+// Manager usage data format still needs to be finalized.
